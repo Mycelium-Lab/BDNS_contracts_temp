@@ -1,8 +1,8 @@
-# ENS
+# BDNS
 
-[![Build Status](https://travis-ci.org/ensdomains/ens-contracts.svg?branch=master)](https://travis-ci.org/ensdomains/ens-contracts)
+[![Build Status](https://travis-ci.org/BDNSdomains/BDNS-contracts.svg?branch=master)](https://travis-ci.org/BDNSdomains/ens-contracts)
 
-For documentation of the ENS system, see [docs.ens.domains](https://docs.ens.domains/).
+For documentation of the BDNS system, see [docs.BDNS.domains](https://docs.ens.domains/).
 
 ## npm package
 
@@ -13,9 +13,9 @@ import {
   BaseRegistrar,
   BaseRegistrarImplementation,
   BulkRenewal,
-  ENS,
-  ENSRegistry,
-  ENSRegistryWithFallback,
+  BDNS,
+  BDNSRegistry,
+  BDNSRegistryWithFallback,
   ETHRegistrarController,
   FIFSRegistrar,
   LinearPremiumPriceOracle,
@@ -25,29 +25,29 @@ import {
   ReverseRegistrar,
   StablePriceOracle,
   TestRegistrar
-} from '@ensdomains/ens-contracts'
+} from '@BDNSdomains/BDNS-contracts'
 ```
 
 ## Importing from solidity
 
 ```
 // Registry
-import '@ensdomains/ens-contracts/contracts/registry/ENS.sol';
-import '@ensdomains/ens-contracts/contracts/registry/ENSRegistry.sol';
-import '@ensdomains/ens-contracts/contracts/registry/ENSRegistryWithFallback.sol';
-import '@ensdomains/ens-contracts/contracts/registry/ReverseRegistrar.sol';
-import '@ensdomains/ens-contracts/contracts/registry/TestRegistrar.sol';
+import '@ensdomains/ens-contracts/contracts/registry/BDNS.sol';
+import '@ensdomains/BDNS-contracts/contracts/registry/ENSRegistry.sol';
+import '@ensdomains/BDNS-contracts/contracts/registry/ENSRegistryWithFallback.sol';
+import '@ensdomains/BDNS-contracts/contracts/registry/ReverseRegistrar.sol';
+import '@ensdomains/BDNS-contracts/contracts/registry/TestRegistrar.sol';
 // EthRegistrar
-import '@ensdomains/ens-contracts/contracts/ethregistrar/BaseRegistrar.sol';
-import '@ensdomains/ens-contracts/contracts/ethregistrar/BaseRegistrarImplementation.sol';
-import '@ensdomains/ens-contracts/contracts/ethregistrar/BulkRenewal.sol';
-import '@ensdomains/ens-contracts/contracts/ethregistrar/ETHRegistrarController.sol';
-import '@ensdomains/ens-contracts/contracts/ethregistrar/LinearPremiumPriceOracle.sol';
-import '@ensdomains/ens-contracts/contracts/ethregistrar/PriceOracle.sol';
-import '@ensdomains/ens-contracts/contracts/ethregistrar/StablePriceOracle.sol';
+import '@BDNSdomains/BDNS-contracts/contracts/ethregistrar/BaseRegistrar.sol';
+import '@BDNSdomains/BDNS-contracts/contracts/ethregistrar/BaseRegistrarImplementation.sol';
+import '@BDNSdomains/BDNS-contracts/contracts/ethregistrar/BulkRenewal.sol';
+import '@BDNSdomains/BDNS-contracts/contracts/ethregistrar/ETHRegistrarController.sol';
+import '@BDNSdomains/BDNS-contracts/contracts/ethregistrar/LinearPremiumPriceOracle.sol';
+import '@BDNSdomains/BDNS-contracts/contracts/ethregistrar/PriceOracle.sol';
+import '@BDNSdomains/BDNS-contracts/contracts/ethregistrar/StablePriceOracle.sol';
 // Resolvers
-import '@ensdomains/ens-contracts/contracts/resolvers/PublicResolver.sol';
-import '@ensdomains/ens-contracts/contracts/resolvers/Resolver.sol';
+import '@BDNSdomains/BDNS-contracts/contracts/resolvers/PublicResolver.sol';
+import '@BDNSdomains/BDNS-contracts/contracts/resolvers/Resolver.sol';
 ```
 
 ##  Accessing to binary file.
@@ -131,7 +131,7 @@ StablePriceOracle is a price oracle implementation that allows the contract owne
 
 ## Resolvers
 
-Resolver implements a general-purpose ENS resolver that is suitable for most standard ENS use cases. The public resolver permits updates to ENS records by the owner of the corresponding name.
+Resolver implements a general-purpose BDNS resolver that is suitable for most standard BDNS use cases. The public resolver permits updates to BDNS records by the owner of the corresponding name.
 
 PublicResolver includes the following profiles that implements different EIPs.
 
@@ -142,15 +142,15 @@ PublicResolver includes the following profiles that implements different EIPs.
 - NameResolver = EIP 181 - Reverse resolution (`name()`).
 - PubkeyResolver = EIP 619 - SECP256k1 public keys (`pubkey()`).
 - TextResolver = EIP 634 - Text records (`text()`).
-- DNSResolver = Experimental support is available for hosting DNS domains on the Ethereum blockchain via ENS. [The more detail](https://veox-ens.readthedocs.io/en/latest/dns.html) is on the old ENS doc.
+- DNSResolver = Experimental support is available for hosting DNS domains on the Ethereum blockchain via BDNS. [The more detail](https://veox-BDNS.readthedocs.io/en/latest/dns.html) is on the old BDNS doc.
 
 ## Developer guide
 
 ### How to setup
 
 ```
-git clone https://github.com/ensdomains/ens-contracts
-cd ens-contracts
+git clone https://github.com/BDNSdomains/BDNS-contracts
+cd BDNS-contracts
 yarn
 ```
 
